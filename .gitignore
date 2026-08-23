@@ -1,1 +1,15 @@
+# Logs (regenerated locally via generator_log.py)
 *.log
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python bytecode / cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/

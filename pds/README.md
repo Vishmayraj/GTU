@@ -21,9 +21,32 @@ Practicals 9 and 10 (classifier and reusable pipeline) are still in progress.
 
 ## Setup
 
+Clone the repo and `cd` into this subject folder -- the venv and
+`requirements.txt` for PDS live here, not at the repo root, since other
+subjects don't need pandas/scikit-learn/etc.:
+
+```bash
+git clone https://github.com/Vishmayraj/GTU
+cd GTU/pds
+```
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+
+# activate it
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+
+Then install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
+
+When you're done, `deactivate` exits the virtual environment.
 
 Then generate the log file the practicals read from (it's gitignored, so
 you need to create it locally):
@@ -37,7 +60,7 @@ path traversal, brute-force, and bot/scanner traffic mixed in, so every
 downstream practical has real signal to work with. It's deterministic
 (seeded), so re-running it regenerates the same data.
 
-Once the log file exists, open the notebooks in order — each one reads the
+Once the log file exists, open the notebooks in order -- each one reads the
 output of the previous stage.
 
 ## Practicals
@@ -57,7 +80,7 @@ output of the previous stage.
 
 ## Notes
 
-- `logs/access.log` is not committed — it's regenerated locally via
+- `logs/access.log` is not committed -- it's regenerated locally via
   `generator_log.py` so the repo stays small and every run starts from a
   known, reproducible dataset.
 - Notebooks assume they're run from the `pds/` directory (paths like
