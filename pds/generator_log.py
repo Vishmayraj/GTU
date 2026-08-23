@@ -147,7 +147,7 @@ for _ in range(NUM_BOT_SCAN):
 
 rows.sort(key=lambda r: r[0])
 
-with open("access.log", "w") as f:
+with open("pds/logs/access.log", "w") as f:
     for _, line in rows:
         f.write(line + "\n")
 
